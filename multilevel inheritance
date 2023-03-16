@@ -1,0 +1,44 @@
+#include <iostream>
+using namespace std;
+
+class Student {
+    protected:
+        string name;
+        int roll;
+    public:
+        void get() {
+            cout << "Enter name: ";
+            cin >> name;
+            cout << "Enter roll number: ";
+            cin >> roll;
+        }
+};
+
+class Sports : public Student {
+    protected:
+        int score;
+    public:
+        void getsm() {
+            cout << "Enter sports score: ";
+            cin >> score;
+        }
+};
+
+class Statement : public Sports {
+    public:
+        void display() {
+            cout << "Name: " << name << endl;
+            cout << "Roll number: " << roll << endl;
+            cout << "Sports score: " << score << endl;
+            cout << "Total marks: " << ( score) << endl;
+            cout << "Average marks: " << ( score) << endl;
+        }
+};
+
+int main() {
+    Statement obj;
+    obj.get();
+    obj.getsm();
+    obj.display();
+    return 0;
+}
