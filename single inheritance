@@ -1,0 +1,27 @@
+#include<iostream>
+using namespace std;
+class jucie
+{
+    public:
+    void drinks()
+    {
+        cout <<"All drinks are avaliable"<<endl;
+        
+    }
+};
+
+class coffee : public jucie{
+    public:
+    void green ()
+    {
+        cout << "All types of coffe";
+    }
+};
+int main()
+{
+    coffee shop;
+    shop.drinks();
+    shop.green();
+    return 0;
+    
+}
