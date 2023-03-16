@@ -1,0 +1,48 @@
+#include<iostream>
+using namespace std;
+class party
+{
+    public:
+
+     int meals;
+     void food()
+     {
+         cout <<"Enter number of meals: ";
+         cin >>meals;
+
+     }
+};
+class drinks
+{
+    public:
+    int drinks;
+     void liquor()
+     {
+      cout <<"Enter number of drinks: ";
+      cin >>drinks;
+     }
+};
+class Bill : public party,public drinks
+{
+    int total_meals;
+    int total_drinks;
+    int total_bill;
+
+    public:
+    void total()
+    {
+        total_meals=meals*90;
+        total_drinks=drinks*60;
+        total_bill=total_meals+total_drinks;
+        cout <<"Total bill for the party is : "<<total_bill;
+         }
+};
+ int main()
+ {
+     Bill b;
+     b.food();
+     b.liquor();
+     b.total();
+     return 0;
+
+ }
